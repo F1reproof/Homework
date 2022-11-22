@@ -5,7 +5,7 @@ import s from './Affairs.module.css'
 
 type AffairsPropsType = {
     data:  AffairType[]// need to fix any
-    setFilter: (filter: FilterType) => void
+    setFilter: (filterValue: FilterType) => void
     deleteAffairCallback: (_id: number) => void
     filter: FilterType
 }
@@ -37,8 +37,7 @@ function Affairs(props: AffairsPropsType) {
         <Affair
             key={a._id} // кеи ОБЯЗАТЕЛЬНЫ в 99% - так что лучше их писать всегда при создании компонент в мапе
             affair={a}
-            deleteAffairCallback={props.deleteAffairCallback}
-        />
+            deleteAffairCallback={props.deleteAffairCallback}/>
     ))
 
     return (
@@ -47,29 +46,25 @@ function Affairs(props: AffairsPropsType) {
                 <button
                     id={'hw2-button-all'}
                     onClick={setAll}
-                    className={cnAll}
-                >
+                    className={cnAll}>
                     All
                 </button>
                 <button
                     id={'hw2-button-high'}
                     onClick={setHigh}
-                    className={cnHigh}
-                >
+                    className={cnHigh}>
                     High
                 </button>
                 <button
                     id={'hw2-button-middle'}
                     onClick={setMiddle}
-                    className={cnMiddle}
-                >
+                    className={cnMiddle}>
                     Middle
                 </button>
                 <button
                     id={'hw2-button-low'}
                     onClick={setLow}
-                    className={cnLow}
-                >
+                    className={cnLow}>
                     Low
                 </button>
             </div>
