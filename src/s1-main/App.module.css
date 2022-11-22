@@ -1,11 +1,32 @@
 .App {
     --header_height: 60px;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 27px;
+    margin: 0 auto;
+    max-width: 1140px;
+    padding-top: 107px;
 }
 
+.App:not(:last-child) {
+    margin-bottom: 10px
+}
+
+
 .hw {
+    border-bottom: 1px solid #d9d9d9;
+    border-top: 1px solid #d9d9d9;
+    padding: 30px;
 
 }
 
 .hwTitle {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 27px;
 
+}
+
+.hwTitle:not(:last-child) {
+    margin-bottom: 10px;
 }
